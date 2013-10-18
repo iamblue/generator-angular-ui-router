@@ -1,4 +1,4 @@
-# AngularJS generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-angular.png?branch=master)](http://travis-ci.org/yeoman/generator-angular)
+# AngularJS generator (ui-router) [![Build Status](https://secure.travis-ci.org/iamblue/generator-angular-ui-router.png?branch=master)](http://travis-ci.org/iamblue/generator-angular-ui-router)
 
 Maintainer: [Brian Ford](https://github.com/btford)
 
