@@ -64,6 +64,9 @@ var Generator = module.exports = function Generator() {
 util.inherits(Generator, yeoman.generators.NamedBase);
 
 Generator.prototype.appTemplate = function (src, dest) {
+  // console.log(this.scriptSuffix);
+  // console.log(src);
+  
   yeoman.generators.Base.prototype.template.apply(this, [
     src + this.scriptSuffix,
     path.join(this.env.options.appPath, dest) + this.scriptSuffix

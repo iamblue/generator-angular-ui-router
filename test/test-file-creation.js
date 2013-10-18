@@ -8,7 +8,7 @@ var generators = require('yeoman-generator');
 var helpers = require('yeoman-generator').test;
 var _ = require('underscore.string');
 
-describe('Angular generator', function () {
+describe('angular-ui-router generator', function () {
   var angular;
 
   beforeEach(function (done) {
@@ -25,7 +25,7 @@ describe('Angular generator', function () {
       if (err) {
         done(err);
       }
-      angular = helpers.createGenerator('angular:app', deps);
+      angular = helpers.createGenerator('angular-ui-router:app', deps);
       angular.options['skip-install'] = true;
       done();
     });
@@ -129,7 +129,7 @@ describe('Angular generator', function () {
     var angularGenerator;
     var name = 'foo';
     var deps = [path.join('../..', generatorType)];
-    angularGenerator = helpers.createGenerator('angular:' + generatorType, deps, [name]);
+    angularGenerator = helpers.createGenerator('angular-ui-router:' + generatorType, deps, [name]);
 
     helpers.mockPrompt(angular, {
       bootstrap: true,
@@ -195,7 +195,7 @@ describe('Angular generator', function () {
     it('should generate a new view', function (done) {
       var angularView;
       var deps = ['../../view'];
-      angularView = helpers.createGenerator('angular:view', deps, ['foo']);
+      angularView = helpers.createGenerator('angular-ui-router:view', deps, ['foo']);
 
       helpers.mockPrompt(angular, {
         bootstrap: true,
@@ -215,7 +215,7 @@ describe('Angular generator', function () {
     it('should generate a new view in subdirectories', function (done) {
       var angularView;
       var deps = ['../../view'];
-      angularView = helpers.createGenerator('angular:view', deps, ['foo/bar']);
+      angularView = helpers.createGenerator('angular-ui-router:view', deps, ['foo/bar']);
 
       helpers.mockPrompt(angular, {
         bootstrap: true,

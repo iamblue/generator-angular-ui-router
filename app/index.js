@@ -40,15 +40,15 @@ var Generator = module.exports = function Generator(args, options) {
     args.push('--minsafe');
   }
 
-  this.hookFor('angular:common', {
+  this.hookFor('angular-ui-router:common', {
     args: args
   });
 
-  this.hookFor('angular:main', {
+  this.hookFor('angular-ui-router:main', {
     args: args
   });
 
-  this.hookFor('angular:controller', {
+  this.hookFor('angular-ui-router:controller', {
     args: args
   });
 
@@ -146,6 +146,7 @@ Generator.prototype.askForModules = function askForModules() {
     }
 
     if (angMods.length) {
+      this.env.options.uirouterModules = this.uirouterModule;
       this.env.options.angularDeps = "\n  " + angMods.join(",\n  ") +"\n";
     }
 
@@ -224,6 +225,10 @@ Generator.prototype.extraModules = function extraModules() {
 
   if (this.sanitizeModule) {
     modules.push('bower_components/angular-sanitize/angular-sanitize.js');
+  }
+
+  if (this.uirouterModule) {
+    modules.push('bower_components/angular-ui-router/release/angular-ui-router.js');
   }
 
   if (modules.length) {

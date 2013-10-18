@@ -1,6 +1,7 @@
-# AngularJS generator (ui-router) [![Build Status](https://secure.travis-ci.org/iamblue/generator-angular-ui-router.png?branch=master)](http://travis-ci.org/iamblue/generator-angular-ui-router)
+# AngularJS generator (add ui-router plugin) [![Build Status](https://secure.travis-ci.org/iamblue/generator-angular-ui-router.png?branch=master)](http://travis-ci.org/iamblue/generator-angular-ui-router)
 
-Maintainer: [Brian Ford](https://github.com/btford)
+
+Maintainer: [iamblue](https://github.com/iamblue)
 
 Based on [angular-seed](https://github.com/angular/angular-seed/)
 
@@ -17,27 +18,27 @@ Make a new directory, and `cd` into it:
 mkdir my-new-project && cd $_
 ```
 
-Run `yo angular`, optionally passing an app name:
+Run `yo angular-ui-router`, optionally passing an app name:
 ```
-yo angular [app-name]
+yo angular-ui-router [app-name]
 ```
 
 ## Generators
 
 Available generators:
 
-* [angular](#app) (aka [angular:app](#app))
-* [angular:controller](#controller)
-* [angular:directive](#directive)
-* [angular:filter](#filter)
-* [angular:route](#route)
-* [angular:service](#service)
-* [angular:provider](#service)
-* [angular:factory](#service)
-* [angular:value](#service)
-* [angular:constant](#service)
-* [angular:decorator] (#decorator)
-* [angular:view](#view)
+* [angular-ui-router](#app) (aka [angular-ui-router:app](#app))
+* [angular-ui-router:controller](#controller)
+* [angular-ui-router:directive](#directive)
+* [angular-ui-router:filter](#filter)
+* [angular-ui-router:route](#route)
+* [angular-ui-router:service](#service)
+* [angular-ui-router:provider](#service)
+* [angular-ui-router:factory](#service)
+* [angular-ui-router:value](#service)
+* [angular-ui-router:constant](#service)
+* [angular-ui-router:decorator] (#decorator)
+* [angular-ui-router:view](#view)
 
 **Note: Generators are to be run from the root directory of your app.**
 
@@ -46,7 +47,7 @@ Sets up a new AngularJS app, generating all the boilerplate you need to get star
 
 Example:
 ```bash
-yo angular
+yo angular-ui-router
 ```
 
 ### Route
@@ -54,7 +55,7 @@ Generates a controller and view, and configures a route in `app/scripts/app.js` 
 
 Example:
 ```bash
-yo angular:route myroute
+yo angular-ui-router:route myroute
 ```
 
 Produces `app/scripts/controllers/myroute.js`:
@@ -74,7 +75,7 @@ Generates a controller in `app/scripts/controllers`.
 
 Example:
 ```bash
-yo angular:controller user
+yo angular-ui-router:controller user
 ```
 
 Produces `app/scripts/controllers/user.js`:
@@ -88,7 +89,7 @@ Generates a directive in `app/scripts/directives`.
 
 Example:
 ```bash
-yo angular:directive myDirective
+yo angular-ui-router:directive myDirective
 ```
 
 Produces `app/scripts/directives/myDirective.js`:
@@ -109,7 +110,7 @@ Generates a filter in `app/scripts/filters`.
 
 Example:
 ```bash
-yo angular:filter myFilter
+yo angular-ui-router:filter myFilter
 ```
 
 Produces `app/scripts/filters/myFilter.js`:
@@ -126,7 +127,7 @@ Generates an HTML view file in `app/views`.
 
 Example:
 ```bash
-yo angular:view user
+yo angular-ui-router:view user
 ```
 
 Produces `app/views/user.html`:
@@ -139,7 +140,7 @@ Generates an AngularJS service.
 
 Example:
 ```bash
-yo angular:service myService
+yo angular-ui-router:service myService
 ```
 
 Produces `app/scripts/services/myService.js`:
@@ -156,7 +157,7 @@ Generates an AngularJS service decorator.
 
 Example:
 ```bash
-yo angular:decorator serviceName
+yo angular-ui-router:decorator serviceName
 ```
 
 Produces `app/scripts/decorators/serviceNameDecorator.js`:
@@ -177,7 +178,7 @@ For generators that output scripts, the `--coffee` option will output CoffeeScri
 
 For example:
 ```bash
-yo angular:controller user --coffee
+yo angular-ui-router:controller user --coffee
 ```
 
 Produces `app/scripts/controller/user.coffee`:
@@ -193,7 +194,7 @@ By default, generators produce unannotated code. Without annotations, AngularJS'
 
 #### Example
 ```bash
-yo angular:controller user --minsafe
+yo angular-ui-router:controller user --minsafe
 ```
 
 Produces `app/controller/user.js`:
@@ -239,6 +240,7 @@ The following additional modules are available as components on bower, and insta
 * angular-loader
 * angular-resource
 * angular-sanitize
+* angular-ui-router
 
 All of these can be updated with `bower update` as new versions of AngularJS are released.
 

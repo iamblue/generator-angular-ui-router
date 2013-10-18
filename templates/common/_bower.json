@@ -10,7 +10,7 @@
     "angular-resource": "~1.0.7"<% } %><% if (cookiesModule) { %>,
     "angular-cookies": "~1.0.7"<% } %><% if (sanitizeModule) { %>,
     "angular-sanitize": "~1.0.7"<% } %><% if (uirouterModule) { %>,
-    "angular-sanitize": "*"<% } %> 
+    "angular-ui-router": "*"<% } %> 
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

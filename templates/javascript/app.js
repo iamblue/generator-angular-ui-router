@@ -1,7 +1,6 @@
 'use strict';
 
-<% if(uirouterModule){ %>
-
+<% if(uirouterModules){ %>
   angular.module('<%= _.camelize(appname) %>App', [<%= angularModules %>])
   .config(function ($stateProvider, $urlRouterProvider) {
     //delete $httpProvider.defaults.headers.common['X-Requested-With'];
@@ -13,7 +12,6 @@
         controller:'MainCtrl'
       })
   })
-
 <% }else{ %>
   angular.module('<%= _.camelize(appname) %>App', [<%= angularModules %>])
   .config(function ($routeProvider) {
@@ -26,10 +24,7 @@
         redirectTo: '/'
       });
   });
-
-
-
-<% } >
+<% } %>
 
 
 
