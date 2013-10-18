@@ -7,7 +7,7 @@ Based on [angular-seed](https://github.com/angular/angular-seed/)
 
 ## Usage
 
-Install `generator-angular`:
+Install `generator-angular-ui-router`:
 ```
 npm install -g generator-angular-ui-router
 ```
