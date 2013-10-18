@@ -1,5 +1,7 @@
-# AngularJS generator (add ui-router plugin) [![Build Status](https://secure.travis-ci.org/iamblue/generator-angular-ui-router.png?branch=master)](http://travis-ci.org/iamblue/generator-angular-ui-router)
+# AngularJS generator (add ui-router plugin)
 
+This project fork from :yeoman / generator-angular
+I add 'ui-router' plugin in this module.
 
 Maintainer: [iamblue](https://github.com/iamblue)
 
