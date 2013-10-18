@@ -9,7 +9,7 @@ Based on [angular-seed](https://github.com/angular/angular-seed/)
 
 Install `generator-angular`:
 ```
-npm install -g generator-angular
+npm install -g generator-angular-ui-router
 ```
 
 Make a new directory, and `cd` into it:

@@ -14,7 +14,7 @@
   <body ng-app="<%= _.camelize(appname) %>App">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    <![endif]--> 
 
     <!--[if lt IE 9]>
       <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -22,7 +22,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <% if (uirouterModule){ %>
+    <div ui-view=""></div>
+    <% }else{ %>
     <div class="container" ng-view></div>
+    <% } %>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

@@ -80,7 +80,7 @@ Generator.prototype.askForBootstrap = function askForBootstrap() {
     name: 'bootstrap',
     message: 'Would you like to include Twitter Bootstrap?',
     default: true
-  }, {
+  },{
     type: 'confirm',
     name: 'compassBootstrap',
     message: 'Would you like to use the SCSS version of Twitter Bootstrap with the Compass CSS Authoring Framework?',
@@ -115,6 +115,10 @@ Generator.prototype.askForModules = function askForModules() {
       value: 'sanitizeModule',
       name: 'angular-sanitize.js',
       checked: true
+    }, {
+      value: 'uirouterModule',
+      name: 'angular-ui-router.js',
+      checked: true
     }]
   }];
 
@@ -123,6 +127,7 @@ Generator.prototype.askForModules = function askForModules() {
     this.resourceModule = hasMod('resourceModule');
     this.cookiesModule = hasMod('cookiesModule');
     this.sanitizeModule = hasMod('sanitizeModule');
+    this.uirouterModule = hasMod('uirouterModule');
 
     var angMods = [];
 
@@ -135,6 +140,9 @@ Generator.prototype.askForModules = function askForModules() {
     }
     if (this.sanitizeModule) {
       angMods.push("'ngSanitize'");
+    }
+    if (this.uirouterModule) {
+      angMods.push("'ui.router'");
     }
 
     if (angMods.length) {
