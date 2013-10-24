@@ -152,7 +152,7 @@ angular.module('myMod').service('myService', function () {
 });
 ```
 
-You can also do `yo angular:factory`, `yo angular:provider`, `yo angular:value`, and `yo angular:constant` for other types of services.
+You can also do `yo angular-ui-router:factory`, `yo angular-ui-router:provider`, `yo angular-ui-router:value`, and `yo angular-ui-router:constant` for other types of services.
 
 ### Decorator
 Generates an AngularJS service decorator.
@@ -254,7 +254,7 @@ You can change the `app` directory by adding a `appPath` property to `bower.json
 
 ```json
 {
-  "name": "yo-test",
+  "name": "yo-testt",
   "version": "0.0.0",
   ...
   "appPath": "public"
