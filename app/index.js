@@ -72,6 +72,37 @@ var Generator = module.exports = function Generator(args, options) {
 
 util.inherits(Generator, yeoman.generators.Base);
 
+Generator.prototype.askForSass = function askForSass() {
+  var cb = this.async();
+
+  this.prompt([{
+    type: 'confirm',
+    name: 'usingSass',
+    message: 'Would you like to use Sass with the Compass CSS Authoring Framework?',
+    default: true
+  }, {
+    type: 'list',
+    name: 'syntax',
+    message: 'Which syntax do you prefer?',
+    choices: ['sass', 'scss'],
+    when: function (props) {
+      return props.usingSass;
+    }
+  }], function (props) {
+    var syntax = props.syntax;
+
+    this.usingSass = props.usingSass;
+
+    if (syntax === 'sass') {
+      this.sass = true;
+    } else if (syntax === 'scss') {
+      this.scss = true;
+    }
+
+    cb();
+  }.bind(this));
+};
+
 Generator.prototype.askForBootstrap = function askForBootstrap() {
   var cb = this.async();
 
@@ -158,7 +189,19 @@ Generator.prototype.readIndex = function readIndex() {
   this.indexFile = this.engine(this.read('../../templates/common/index.html'), this);
 };
 
+Generator.prototype.useSass = function useSass() {
+  var sass = this.sass;
+  var scss = this.scss;
+  var prefix;
+
+  if (this.usingSass && !this.compassBootstrap) {
+    prefix = sass ? 'sa' : 'sc';
+    this.copy('styles/sass/main.' + prefix + 'ss', 'app/styles/main.' + prefix + 'ss');
+  }
+};
+
 // Waiting a more flexible solution for #138
+// Added an ugly if-else statemnt to exclude copying main.css when user use sass.
 Generator.prototype.bootstrapFiles = function bootstrapFiles() {
   var sass = this.compassBootstrap;
   var files = [];
@@ -176,7 +219,11 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
   files.push('main.' + (sass ? 's' : '') + 'css');
 
   files.forEach(function (file) {
-    this.copy(source + file, 'app/styles/' + file);
+    if (file !== 'main.css') {
+      this.copy(source + file, 'app/styles/' + file);
+    } else if (!this.sass && !this.scss) {
+      this.copy(source + file, 'app/styles/' + file);
+    }
   }.bind(this));
 
   this.indexFile = this.appendFiles({
