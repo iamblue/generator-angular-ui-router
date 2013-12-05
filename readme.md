@@ -25,6 +25,14 @@ Run `yo angular-ui-router`, optionally passing an app name:
 yo angular-ui-router [app-name]
 ```
 
+Optionally using Sass:
+```
+[?] Would you like to use Sass with the Compass CSS Authoring Framework? Yes
+[?] Which syntax do you prefer? (Use arrow keys)
+❯ sass 
+  scss 
+```
+
 ## Generators
 
 Available generators:
