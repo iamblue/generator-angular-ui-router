@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-ui-router",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Yeoman generator for AngularJS( include UI-router )",
   "keywords": [
     "yeoman-generator",
