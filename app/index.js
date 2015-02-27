@@ -210,10 +210,12 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
   if (this.bootstrap) {
     if (!sass) {
       files.push('bootstrap.css');
+      this.copy('fonts/glyphicons-halflings-regular.eot', 'app/fonts/glyphicons-halflings-regular.eot');
+      this.copy('fonts/glyphicons-halflings-regular.svg', 'app/fonts/glyphicons-halflings-regular.svg');
+      this.copy('fonts/glyphicons-halflings-regular.ttf', 'app/fonts/glyphicons-halflings-regular.ttf');
+      this.copy('fonts/glyphicons-halflings-regular.woff', 'app/fonts/glyphicons-halflings-regular.woff');
+      this.copy('fonts/glyphicons-halflings-regular.woff2', 'app/fonts/glyphicons-halflings-regular.woff2');
     }
-
-    this.copy('images/glyphicons-halflings.png', 'app/images/glyphicons-halflings.png');
-    this.copy('images/glyphicons-halflings-white.png', 'app/images/glyphicons-halflings-white.png');
   }
 
   files.push('main.' + (sass ? 's' : '') + 'css');
@@ -244,19 +246,7 @@ Generator.prototype.bootstrapJS = function bootstrapJS() {
 
   // Wire Twitter Bootstrap plugins
   this.indexFile = this.appendScripts(this.indexFile, 'scripts/plugins.js', [
-    'bower_components/bootstrap-sass/js/bootstrap-affix.js',
-    'bower_components/bootstrap-sass/js/bootstrap-alert.js',
-    'bower_components/bootstrap-sass/js/bootstrap-dropdown.js',
-    'bower_components/bootstrap-sass/js/bootstrap-tooltip.js',
-    'bower_components/bootstrap-sass/js/bootstrap-modal.js',
-    'bower_components/bootstrap-sass/js/bootstrap-transition.js',
-    'bower_components/bootstrap-sass/js/bootstrap-button.js',
-    'bower_components/bootstrap-sass/js/bootstrap-popover.js',
-    'bower_components/bootstrap-sass/js/bootstrap-typeahead.js',
-    'bower_components/bootstrap-sass/js/bootstrap-carousel.js',
-    'bower_components/bootstrap-sass/js/bootstrap-scrollspy.js',
-    'bower_components/bootstrap-sass/js/bootstrap-collapse.js',
-    'bower_components/bootstrap-sass/js/bootstrap-tab.js'
+    'bower_components/twitter-bootstrap-sass/assets/javascripts/bootstrap.js',
   ]);
 };
 
