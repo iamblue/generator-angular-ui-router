@@ -7,7 +7,9 @@ Maintainer: [iamblue](https://github.com/iamblue)
 
 Based on [angular-seed](https://github.com/angular/angular-seed/)
 
-
+This project is one of many things that you can use to get started 
+on a new app. For a comparison of the options and the trade-offs between 
+them, please visit [this](http://www.dancancro.com/comparison-of-angularjs-application-starters) link.
 ## Usage
 
 Install `generator-angular-ui-router`:
