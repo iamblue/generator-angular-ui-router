@@ -57,7 +57,7 @@ Available generators:
 ### App
 Sets up a new AngularJS app, generating all the boilerplate you need to get started. The app generator also optionally installs Twitter Bootstrap and additional AngularJS modules, such as angular-resource.
 
-Example:
+Examples:
 ```bash
 yo angular-ui-router
 ```
